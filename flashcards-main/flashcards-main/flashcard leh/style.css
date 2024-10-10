@@ -1,4 +1,4 @@
-:root {
+root {
     --text-color: #DBE4EF;
     --card-front-color: #144480;
     --card-back-color: #00F4BF;
@@ -15,6 +15,7 @@ body {
    flex-wrap: wrap;
    justify-content: space-between;
    padding: 4rem;
+   gap: 3rem;
 }
 
 .cartao {
@@ -49,6 +50,7 @@ body {
     margin-top: 1rem;
     padding: 2rem; 
     margin-top: 4rem;
+    font-size: 1.4vw;
 }
 
 
@@ -60,7 +62,7 @@ body {
     color: var(--card-back-color);
 }
 
-.cartao:hover .cartao__conteudo{
+.cartao.active .cartao__conteudo{
     transform: rotateY(180deg); 
 }
 
@@ -70,10 +72,13 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
+    background-color: rgba (0, 244, 191, 0.2);
+    border: 4px solid var();
 }
 
 
@@ -91,7 +96,13 @@ footer {
     bottom: 0; 
     width: 100%; 
     height: 2rem;
+    @media(max-width: 560px){
+
+        body{
+            background: url(´img/bg-mobile.webp`)
+
 }
+    
 
 footer p {
     text-align: center; 
